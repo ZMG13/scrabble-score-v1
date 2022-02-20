@@ -1,7 +1,7 @@
 //Reference: https://exercism.org/tracks/kotlin/exercises/scrabble-score/solutions
 class ScrabbleScore {
 
-    fun scoreWord(word: String) = word.map { scoreLetter(it) }.sum()
+    fun scoreWord(word: String) = word.map { scoreLetter(it) }.sum()// calculates score
         //TODO calculate using the scoreLetter method below, the scrabble value of the word passed as a parameter
 
 
@@ -16,7 +16,7 @@ class ScrabbleScore {
             in "FHVWY" -> 4
             in "K" -> 5
             in "JX" -> 8
-            in "QZ" -> 10
+            in "QZ" -> 10// letters and values
             else -> error("Unknown character")
         }
 
@@ -29,4 +29,4 @@ class ScrabbleScore {
            K                                  5
            J, X                               8
            Q, Z                               10"""
-}
+}//letter values
