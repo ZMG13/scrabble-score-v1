@@ -1,14 +1,15 @@
+//Reference: https://exercism.org/tracks/kotlin/exercises/scrabble-score/solutions
 class ScrabbleScore {
 
-    fun scoreWord(word: String): Int{
+    fun scoreWord(word: String) = word.map { scoreLetter(it) }.sum()
         //TODO calculate using the scoreLetter method below, the scrabble value of the word passed as a parameter
-        return 0
-    }
+
+
 
     //TODO the program if the user enters in any chars other than capital letters...try fix this.
     //Reference: https://exercism.org/tracks/kotlin/exercises/scrabble-score/solutions?page=1
-    private fun scoreLetter(char: Char): Int {
-        return when (char) {
+    private fun scoreLetter(letter: Char) = when (letter.uppercaseChar())
+       {
             in "AEIOULNRST" -> 1
             in "DG" -> 2
             in "BCMP" -> 3
@@ -18,7 +19,7 @@ class ScrabbleScore {
             in "QZ" -> 10
             else -> error("Unknown character")
         }
-    }
+
 
     fun letterValues() = """Letter                           Value
            A, E, I, O, U, L, N, R, S, T       1
